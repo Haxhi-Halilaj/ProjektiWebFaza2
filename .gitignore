@@ -1,0 +1,49 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PHP
+*.log
+*.phar
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# Session files
+sessions/
+
+# Cache
+cache/
+tmp/
+
+# Composer
+vendor/
+composer.lock
+
+# npm
+node_modules/
+package-lock.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Test files
+tests/
+
+# Documentation
+*.bak
+
+# Config files with sensitive data
+config/local.php
