@@ -11,7 +11,7 @@ $articles = $news->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>News & Updates - TechCorp Solutions</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -26,7 +26,7 @@ $articles = $news->getAll();
         <section class="section">
             <?php if (empty($articles)): ?>
                 <div class="empty-state">
-                    <p>No news articles available at the moment.</p>
+                    <p>Stay tuned for the latest product updates, industry insights, and company announcements.</p>
                 </div>
             <?php else: ?>
                 <div class="news-list">

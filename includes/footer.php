@@ -3,7 +3,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>About Us</h3>
-                <p>We are a leading company providing quality products and services to customers worldwide.</p>
+                <p>TechCorp Solutions is your trusted partner for premium business products and innovative solutions. We help businesses succeed with quality products and exceptional service.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -16,9 +16,9 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p>Email: info@company.com<br>
-                   Phone: +1 (555) 123-4567<br>
-                   Address: 123 Business St, City</p>
+                <p>Email: info@techcorp.com<br>
+                   Phone: +1 (415) 555-0123<br>
+                   Address: 1245 Innovation Drive, San Francisco, CA 94105</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Our Company. All rights reserved.</p>
+            <p>&copy; <?php echo date('Y'); ?> TechCorp Solutions. All rights reserved.</p>
         </div>
     </div>
 </footer>

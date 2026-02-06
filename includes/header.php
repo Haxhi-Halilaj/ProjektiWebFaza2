@@ -17,7 +17,7 @@ $cart_count = $cart->getCartCount();
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="index.php">CompanyName</a>
+                <a href="index.php">TechCorp Solutions</a>
             </div>
             <nav class="nav">
                 <ul>
