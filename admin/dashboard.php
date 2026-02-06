@@ -11,20 +11,25 @@ use Classes\User;
 use Classes\Product;
 use Classes\News;
 use Classes\Contact;
+use Classes\Order;
 
 $user = new User();
 $product = new Product();
 $news = new News();
 $contact = new Contact();
+$order = new Order();
 
 $total_users = count($user->getAllUsers());
 $all_products = $product->getAll();
 $all_news = $news->getAll();
 $all_contacts = $contact->getAll();
+$order_stats = $order->getStatistics();
 
 $total_products = count($all_products);
 $total_news = count($all_news);
 $total_contacts = count($all_contacts);
+$total_orders = $order_stats['total'];
+$total_revenue = $order_stats['revenue'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,6 +77,20 @@ $total_contacts = count($all_contacts);
                     <div class="stat-info">
                         <div class="stat-number"><?php echo $total_contacts; ?></div>
                         <div class="stat-label">Contact Messages</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="stat-info">
+                        <div class="stat-number"><?php echo $total_orders; ?></div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">$<?php echo number_format($total_revenue, 2); ?></div>
+                        <div class="stat-label">Total Revenue</div>
                     </div>
                 </div>
             </div>
@@ -172,6 +191,49 @@ $total_contacts = count($all_contacts);
                         </tbody>
                     </table>
                     <a href="messages.php" class="btn btn-outline">View All Messages</a>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Recent Orders</h2>
+                    <?php 
+                    $all_orders = $order->getAll();
+                    $recent_orders = array_slice($all_orders, 0, 5);
+                    ?>
+                    <?php if (empty($recent_orders)): ?>
+                        <p class="text-muted">No orders yet.</p>
+                    <?php else: ?>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($recent_orders as $ord): ?>
+                                    <tr>
+                                        <td><strong>#<?php echo $ord['id']; ?></strong></td>
+                                        <td><?php echo htmlspecialchars($ord['shipping_name']); ?></td>
+                                        <td>$<?php echo number_format($ord['total_amount'], 2); ?></td>
+                                        <td>
+                                            <span class="status-badge status-<?php echo $ord['status']; ?>">
+                                                <?php echo ucfirst($ord['status']); ?>
+                                            </span>
+                                        </td>
+                                        <td><?php echo date('M d, Y', strtotime($ord['created_at'])); ?></td>
+                                        <td>
+                                            <a href="view-order.php?id=<?php echo $ord['id']; ?>" class="btn btn-small">View</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <a href="orders.php" class="btn btn-outline">View All Orders</a>
+                    <?php endif; ?>
                 </section>
             </div>
         </main>

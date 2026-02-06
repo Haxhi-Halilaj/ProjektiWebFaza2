@@ -442,3 +442,236 @@
 .admin-sidebar::-webkit-scrollbar-thumb:hover {
     background: #718096;
 }
+
+/* ===========================
+   Order Management
+   =========================== */
+.page-header-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-header-admin h1 {
+    margin-bottom: 0;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-pending {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.status-processing {
+    background: #bee3f8;
+    color: #2c5282;
+}
+
+.status-shipped {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-delivered {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-cancelled {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.order-details-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.order-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-section h2 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.order-section h2 i {
+    color: #667eea;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #718096;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span {
+    color: #2d3748;
+    font-size: 1rem;
+}
+
+.price-large {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.status-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #2d3748;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.status-select:hover {
+    border-color: #667eea;
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.status-select-inline {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    background: #fff;
+    color: #2d3748;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.status-select-inline:hover {
+    border-color: #667eea;
+}
+
+.status-select-inline:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.status-select-inline:disabled {
+    background: #f7fafc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.status-form {
+    margin: 0;
+}
+
+.order-item-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #e2e8f0;
+}
+
+.order-item-thumb-placeholder {
+    width: 60px;
+    height: 60px;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table tfoot {
+    background: #f7fafc;
+    font-weight: 600;
+}
+
+.table tfoot td {
+    padding: 1rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-muted {
+    color: #718096;
+}
+
+@media (max-width: 768px) {
+    .page-header-admin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .filter-buttons {
+        width: 100%;
+    }
+
+    .order-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-section {
+        padding: 1.5rem;
+    }
+}

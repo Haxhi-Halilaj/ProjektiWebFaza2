@@ -14,6 +14,10 @@
             <li><a href="messages.php" class="nav-item <?php echo basename($_SERVER['PHP_SELF']) === 'messages.php' || basename($_SERVER['PHP_SELF']) === 'view-message.php' ? 'active' : ''; ?>">
                 <i class="fas fa-envelope"></i> Messages
             </a></li>
+            <li class="nav-section">Sales & Orders</li>
+            <li><a href="orders.php" class="nav-item <?php echo basename($_SERVER['PHP_SELF']) === 'orders.php' || basename($_SERVER['PHP_SELF']) === 'view-order.php' ? 'active' : ''; ?>">
+                <i class="fas fa-shopping-bag"></i> Orders
+            </a></li>
             <li class="nav-section">User Management</li>
             <li><a href="users.php" class="nav-item <?php echo basename($_SERVER['PHP_SELF']) === 'users.php' ? 'active' : ''; ?>">
                 <i class="fas fa-users"></i> Users
