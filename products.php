@@ -11,7 +11,7 @@ $products = $product->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Products - TechCorp Solutions</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -26,7 +26,7 @@ $products = $product->getAll();
         <section class="section">
             <?php if (empty($products)): ?>
                 <div class="empty-state">
-                    <p>No products available at the moment.</p>
+                    <p>Our product catalog is being updated. Check back soon for our latest business solutions and premium products.</p>
                 </div>
             <?php else: ?>
                 <div class="products-grid">

@@ -78,7 +78,7 @@ if ($result->num_rows == 0) {
     // Create default admin user
     $admin_password = password_hash('admin123', PASSWORD_DEFAULT);
     $insert_admin = "INSERT INTO users (username, email, password, role) 
-                     VALUES ('admin', 'admin@example.com', '$admin_password', 'admin')";
+                     VALUES ('admin', 'admin@techcorp.com', '$admin_password', 'admin')";
     
     if ($conn->query($insert_admin) === TRUE) {
         echo "Default admin user created successfully<br>";
@@ -95,11 +95,11 @@ $result = $conn->query($check_content);
 
 if ($result->num_rows == 0) {
     $home_content = "INSERT INTO page_content (page_name, title, description) 
-                     VALUES ('home', 'Welcome to Our Company', 'Welcome to our amazing company. We provide the best services in the industry.');";
+                     VALUES ('home', 'Premium Products for Modern Businesses', 'Discover our curated selection of innovative products designed to elevate your business operations. From cutting-edge technology solutions to essential business tools, we deliver quality products that drive success.');";
     $conn->query($home_content);
 
     $about_content = "INSERT INTO page_content (page_name, title, description) 
-                      VALUES ('about', 'About Us', 'We are a dedicated team of professionals committed to delivering excellence.');";
+                      VALUES ('about', 'About TechCorp Solutions', 'TechCorp Solutions is a leading provider of premium business products and technology solutions. Since 2014, we have been helping businesses worldwide transform their operations with innovative products backed by exceptional customer service and industry expertise.');";
     $conn->query($about_content);
 
     echo "Sample content inserted successfully<br>";

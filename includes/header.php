@@ -5,7 +5,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="index.php">CompanyName</a>
+                <a href="index.php">TechCorp Solutions</a>
             </div>
             <nav class="nav">
                 <ul>
