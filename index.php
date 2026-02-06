@@ -16,7 +16,7 @@ $latest_news = $news->getLatest(3);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - TechCorp Solutions</title>
+    <title>Home - Our Company</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -26,25 +26,25 @@ $latest_news = $news->getLatest(3);
     <!-- Hero Slider -->
     <div class="hero-slider">
         <div class="slider-container">
-            <div class="slide active" style="background-image: url('public/office.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                 <div class="slide-content">
                     <h1><?php echo htmlspecialchars($home_content['title'] ?? 'Welcome to Our Company'); ?></h1>
                     <p><?php echo htmlspecialchars($home_content['description'] ?? 'Your trusted partner'); ?></p>
                     <a href="products.php" class="btn btn-primary">Explore Products</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: url('public/office1.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
                 <div class="slide-content">
-                    <h1>Premium Business Solutions</h1>
-                    <p>Transform your workspace with our expertly curated product catalog</p>
-                    <a href="products.php" class="btn btn-primary">Browse Products</a>
+                    <h1>Quality & Excellence</h1>
+                    <p>We deliver outstanding products and services</p>
+                    <a href="about.php" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: url('public/office2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                 <div class="slide-content">
-                    <h1>Stay Informed</h1>
-                    <p>Get the latest product updates, industry insights, and company news</p>
-                    <a href="news.php" class="btn btn-primary">Read News</a>
+                    <h1>Innovation & Technology</h1>
+                    <p>Leading the industry with cutting-edge solutions</p>
+                    <a href="contact.php" class="btn btn-primary">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@ $latest_news = $news->getLatest(3);
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <p>Check back soon for the latest product updates and company news.</p>
+                    <p>No news available at the moment.</p>
                 <?php endif; ?>
             </div>
         </section>
@@ -93,22 +93,22 @@ $latest_news = $news->getLatest(3);
                 <div class="feature-card">
                     <i class="fas fa-check-circle"></i>
                     <h3>Quality Assured</h3>
-                    <p>Every product is carefully selected and tested to meet our rigorous quality standards</p>
+                    <p>All our products meet the highest standards</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-headset"></i>
-                    <h3>Expert Support</h3>
-                    <p>Our product specialists are available to help you find the perfect solution</p>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always ready to help you</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-shipping-fast"></i>
-                    <h3>Fast Shipping</h3>
-                    <p>Quick and reliable delivery to get your products to you when you need them</p>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping worldwide</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-lock"></i>
-                    <h3>Secure Shopping</h3>
-                    <p>Your transactions are protected with industry-leading security measures</p>
+                    <h3>Secure</h3>
+                    <p>Safe transactions and data protection</p>
                 </div>
             </div>
         </section>

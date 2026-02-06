@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TechCorp Solutions</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="page-header">
         <h1>Contact Us</h1>
-        <p>Have questions about our products? Our team is here to help</p>
+        <p>Get in touch with our team</p>
     </div>
 
     <div class="container">
@@ -55,20 +55,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h2>Contact Information</h2>
                     <div class="info-item">
                         <h3>Address</h3>
-                        <p>1245 Innovation Drive<br>San Francisco, CA 94105<br>United States</p>
+                        <p>123 Business Street<br>City, State 12345</p>
                     </div>
                     <div class="info-item">
                         <h3>Phone</h3>
-                        <p>Sales: +1 (415) 555-0123<br>Support: +1 (415) 555-0124</p>
+                        <p>+1 (555) 123-4567</p>
                     </div>
                     <div class="info-item">
                         <h3>Email</h3>
-                        <p>Sales: sales@techcorp.com<br>Support: support@techcorp.com<br>General: info@techcorp.com</p>
+                        <p>info@company.com</p>
                     </div>
                     <div class="info-item">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Friday: 8:00 AM - 7:00 PM PST<br>
-                           Saturday: 10:00 AM - 4:00 PM PST<br>
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                           Saturday: 10:00 AM - 4:00 PM<br>
                            Sunday: Closed</p>
                     </div>
                 </div>
